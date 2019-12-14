@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vídeo de fondo</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  
+ <!-- *******VIDEO FONDO******* -->
+ <div class="contenido__video">
+  <!-- 
+    autoplay: propiedad para que se reproduzca una ves que carga la página
+    loop: propiedad para el vídeo se repita infinitamente
+    muted: propiedad para que el vídeo no emita sonido
+    poster: propiedad que muestra una imagen hasta que cargue el vídeo 
+  -->
+  <video class="video" autoplay="autoplay" loop="loop" muted="muted" poster="images/artesano.png">
+   <source src="video/artesano-1920x1080.mp4" type="video/mp4" />
+   <source src="video/artesano-1920x1080.webm" type="video/webm" />
+  </video>
+ </div>
+ 
+ <section class="presentacion">
+  <div class="contenido">
+   <h1 class="titulo"><a class="autor" href="https://luismasdev.com">Luis Mas Dev</a></h1>
+   <p class="informacion">Esta es una manera sencilla desde un punto de vista pero yo me demore en lograrlo y la idea es que te ayude a poder implementarlo mas rápido.</p>
+  </div>
+ </section>
+
+ <footer>
+  <div class="contenido">
+   <a class="autor" href="https://luismasdev.com">&copy; Luis Mas Dev <span id="anio"></span></a>
+  </div>
+ </footer>
+ 
+ <script>
+  var anio = new Date();
+  document.getElementById('anio').innerHTML = anio.getFullYear();
+ </script>
+</body>
+</html>
